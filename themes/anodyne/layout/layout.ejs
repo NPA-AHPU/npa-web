@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<!-- Head tag -->
+<%- partial('_partial/head') %>
+
+<body>
+
+<!-- Main Content -->
+<%- body %>
+
+<!-- Footer -->
+<%- partial('_partial/footer') %>
+
+<!-- After Footer -->
+<%- partial('_partial/after-footer') %>
+
+<!-- <script src="./js/broadcast-me.js"></script> -->
+<script type="text/javascript" src="./js/jquery.min.js"></script>
+<script type="text/javascript" src="./js/slick.min.js"></script>
+<script>
+$(document).ready(function(){
+  $('.sliderbox').slick({
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    speed: 700,
+    dots: true,
+    infinite: true,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    // fade: true,
+    cssEase: 'linear'
+  });
+});
+	
+// var box = document.getElementById('sliderbox');
+// var imagesAndUrl = [{
+//   imgSrc : './img/net7.jpg',
+//   linkHref : "#"
+// },{
+//   imgSrc : './img/net8.jpg',
+//   linkHref : '#'
+// },{
+//   imgSrc : './img/net6.jpg',
+//   linkHref : '#'
+// }];
+// // box => 你需要创建轮播图的父级元素
+// // imagesAndUrl => 数组，存放图片地址以及图片的连接地址
+// var broadcast = new Broadcast(box,imagesAndUrl,{
+//       transitionTime : 800, // 动画过渡时间，默认为800ms
+//       intervalTime : 5000 // 图片切换时间，默认为5s
+//  });
+ </script>
+</body>
+
+</html>
